@@ -1,0 +1,95 @@
+body {
+  background-color: #111;
+  font-family: Arial, sans-serif;
+  color: #ddd;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.intro {
+  display: flex;
+  flex-direction: row; /* Change back to 'column' */
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.text-container {
+  max-width: 100%; /* Allow text container to take full width */
+  margin-bottom: 20px; /* Add some spacing between text and image */
+}
+
+.image-container {
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+}
+
+img {
+  max-width: 70%;
+  border-radius: 12px;
+}
+
+.spotify {
+  margin-top: 20px;
+}
+
+.intro p {
+  margin-bottom: -5px;
+}
+
+.socials {
+  margin: 10px;
+}
+
+.socials a {
+  text-decoration: none;
+  margin: 5px;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Socials Responsiveness */
+.socials a:hover {
+  background-color: #444;
+}
+
+.twitch {
+  background-color: #9147ff;
+  color: #fff;
+}
+
+.youtube {
+  background-color: #ff0000;
+  color: #fff;
+}
+
+.twitter {
+  background-color: #00a8e8;
+  color: #fff;
+}
+
+.github {
+  background-color: #505050;
+  color: #ddd;
+}
+
+.lemmy {
+  background-color: #505050;
+  color: #ddd;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+  .name {
+    font-size: 1.5em;
+  }
+}
