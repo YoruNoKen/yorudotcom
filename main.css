@@ -1,5 +1,5 @@
 body {
-  background-color: #111;
+  background-color: #333;
   font-family: Arial, sans-serif;
   color: #ddd;
   margin: 0;
@@ -13,17 +13,19 @@ header {
 }
 
 .intro {
+  background-color: #111;
   display: flex;
   flex-direction: row; /* Change back to 'column' */
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 30px;
   text-align: center;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .text-container {
-  max-width: 100%; /* Allow text container to take full width */
-  margin-bottom: 20px; /* Add some spacing between text and image */
+  margin-right: 3%;
 }
 
 .image-container {
@@ -32,7 +34,8 @@ header {
 }
 
 img {
-  max-width: 70%;
+  margin-left: 3%;
+  max-width: 80%;
   border-radius: 12px;
 }
 
