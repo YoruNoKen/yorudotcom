@@ -15,7 +15,7 @@ header {
 .intro {
   background-color: #111;
   display: flex;
-  flex-direction: row; /* Change back to 'column' */
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   padding: 30px;
@@ -30,7 +30,7 @@ header {
 
 .image-container {
   display: flex;
-  justify-content: center; /* Center the image horizontally */
+  justify-content: center;
 }
 
 img {
