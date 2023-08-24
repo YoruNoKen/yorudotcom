@@ -13,11 +13,11 @@ header {
 }
 
 .music-player {
-  position: absolute; /* Position the music player absolutely */
-  bottom: 5%; /* Position it at the bottom of the container */
-  left: 5%; /* Position it at the left of the container */
-  padding: 10px; /* Add some padding for better visibility */
-  background-color: rgba(0, 0, 0, 0.7); /* Adding a semi-transparent background for better visibility */
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .intro {
