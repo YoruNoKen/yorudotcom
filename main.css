@@ -65,6 +65,15 @@ img {
   background-color: #444;
 }
 
+.socials a::before {
+  content: attr(data-normal-text);
+}
+
+.socials a:hover::before {
+  content: attr(data-hover-text);
+  font-weight: bold;
+}
+
 .twitch {
   background-color: #9147ff;
   color: #fff;
