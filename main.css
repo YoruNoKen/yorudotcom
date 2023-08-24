@@ -41,7 +41,7 @@ header {
   justify-content: center;
 }
 
-.tooltip {
+.tooltip-img {
   position: relative;
   display: inline-block;
 }
@@ -51,7 +51,7 @@ img {
   border-radius: 12px;
 }
 
-.tooltip .tooltiptext {
+.tooltip-img .tooltiptext-img {
   text-decoration: none;
   visibility: hidden;
   width: auto;
@@ -69,7 +69,7 @@ img {
   transition: opacity 0.3s;
 }
 
-.tooltip:hover .tooltiptext {
+.tooltip-img:hover .tooltiptext-img {
   visibility: visible;
   opacity: 1;
 }
@@ -146,6 +146,30 @@ img {
 
 .lemmy:hover {
   background-color: #3a3a3a;
+}
+
+.twitter-tooltip {
+  color: #00a8e8;
+  position: relative;
+}
+
+.twitter-tooltip:hover::before {
+  content: "@ken_yoru";
+  background-color: #008dc5;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.twitter-tooltip:hover::before {
+  opacity: 1;
 }
 
 /* Responsiveness */
