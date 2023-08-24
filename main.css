@@ -33,10 +33,37 @@ header {
   justify-content: center;
 }
 
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
 img {
-  margin-left: 3%;
   max-width: 80%;
   border-radius: 12px;
+}
+
+.tooltip .tooltiptext {
+  text-decoration: none;
+  visibility: hidden;
+  width: auto;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
 
 .spotify {
