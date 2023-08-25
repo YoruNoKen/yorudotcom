@@ -8,16 +8,7 @@ body {
 
 header {
   background-color: #333;
-  padding: 10px 0;
   text-align: center;
-}
-
-.music-player {
-  position: absolute;
-  bottom: 5%;
-  left: 5%;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .intro {
