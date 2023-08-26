@@ -38,7 +38,7 @@ header {
 }
 
 img {
-  max-width: 80%;
+  max-width: 70%;
   border-radius: 12px;
 }
 
@@ -139,6 +139,24 @@ img {
   background-color: #3a3a3a;
 }
 
+.donate {
+  background-color: #c70000;
+  color: #ddd;
+}
+
+.donate:hover {
+  background-color: #9e0000;
+}
+
+.projects {
+  background-color: #1bb630;
+  color: #ddd;
+}
+
+.projects:hover {
+  background-color: #1c9b2d;
+}
+
 .twitter-tooltip {
   color: #00a8e8;
   position: relative;
@@ -161,15 +179,6 @@ img {
 
 .twitter-tooltip:hover::before {
   opacity: 1;
-}
-
-.donate {
-  background-color: #c70000;
-  color: #ddd;
-}
-
-.donate:hover {
-  background-color: #9e0000;
 }
 
 .go-back {
