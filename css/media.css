@@ -1,0 +1,12 @@
+@media (max-width: 800px) {
+  .name {
+    font-size: 0.8em;
+  }
+  p {
+    font-size: 0.8em;
+  }
+  img {
+    max-width: 50%;
+    border-radius: 10px;
+  }
+}

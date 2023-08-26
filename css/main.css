@@ -21,6 +21,7 @@ header {
   text-align: center;
   margin-left: 5%;
   margin-right: 5%;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 
 .intro p {
@@ -92,6 +93,19 @@ img {
 .socials a:hover::before {
   content: attr(data-hover-text);
   font-weight: bold;
+}
+
+.button {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.nav {
+  background-color: #505050;
+  color: #ddd;
+}
+
+.nav:hover {
+  background-color: #3a3a3a;
 }
 
 .twitch {
@@ -293,18 +307,4 @@ img {
   text-align: center;
   margin-left: 5%;
   margin-right: 5%;
-}
-
-/* Responsiveness */
-@media (max-width: 800px) {
-  .name {
-    font-size: 0.8em;
-  }
-  p {
-    font-size: 0.8em;
-  }
-  img {
-    max-width: 50%;
-    border-radius: 10px;
-  }
 }

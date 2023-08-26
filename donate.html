@@ -7,13 +7,17 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora&display=swap" />
-    <link rel="stylesheet" href="main.css" />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/media.css" />
   </head>
   <body>
-    <script src="donate_main.js"></script>
+    <script src="js/donate_main.js"></script>
     <header>
       <div class="socials">
-        <a class="go-back" href="index.html" data-hover-text="Back!" data-normal-text="Go Back"></a>
+        <a class="up-button nav" href="index.html" data-hover-text="Home!" data-normal-text="Home"></a>
+        <a class="up-button nav" href="projects.html" data-hover-text="Mine!" data-normal-text="Projects"></a>
       </div>
     </header>
     <main>
@@ -26,15 +30,15 @@
             <li>Name: <span class="iban-name" id="iban-name">Muhammed Fatih Fetvaci</span></li>
           </ul>
         </div>
-        <div class="image-container">
+        <!-- <div class="image-container">
           <div class="tooltip-img">
             <img src="pixel sorter.gif" alt="me" />
             <a class="tooltiptext-img" target="_blank" href="https://youtu.be/sB4iOw62R3I?si=0pP1FDMXNSR4SsFY">I am here</a>
           </div>
-        </div>
+        </div> -->
       </div>
       <div class="donations-container">
-        <p id="more-donations">I will keep updating this page when I get more donation methods.<br />TOTAL RAISED: $11.</p>
+        <p id="more-donations">I will keep updating this page when I get more donation methods.<br /><span style="font-weight: bold">TOTAL RAISED: $11.</span></p>
       </div>
     </main>
   </body>
