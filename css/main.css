@@ -11,6 +11,11 @@ header {
   text-align: center;
 }
 
+.name {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
 .intro {
   background-color: #111;
   display: flex;
