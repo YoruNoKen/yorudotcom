@@ -11,13 +11,18 @@ header {
   text-align: center;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .name {
   font-size: 3rem;
   font-weight: 600;
 }
 
 .intro {
-  background-color: #111;
+  background-color: rgb(17, 17, 17);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,17 +36,24 @@ header {
 }
 
 .discord-card {
-  background-color: rgba(145, 145, 145, 0.067);
-  padding: 0.5%;
-  width: 200px; /* Set the width of the card */
+  background-color: rgba(128, 132, 142, 1);
+  padding: 4px;
+  width: 200px;
+  transition: all 0.6s ease;
+  font-size: 100%;
 }
 
-.username,
-.status {
-  background-color: rgb(78, 73, 73);
+.username {
+  background-color: rgba(17, 17, 17, 1);
   padding: 8px;
-  margin: 4% 2%;
-  text-align: center;
+  transition: all 0.6s ease;
+  /* margin: 4% 2%;
+  /* text-align: center; */
+}
+
+.username p {
+  font-weight: bold;
+  font-size: inherit;
 }
 
 #miku {
@@ -49,9 +61,11 @@ header {
   width: 40%;
 }
 
-.username p {
-  font-weight: bold;
+.discord-card:hover {
+  width: 220px;
+  font-size: 110%;
 }
+
 .err-intro {
   background-color: #111;
   display: flex;

@@ -1,4 +1,4 @@
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
   .name {
     font-size: 2.3em;
   }
@@ -24,50 +24,8 @@
   .intro p {
     margin-bottom: 2%;
   }
-}
 
-@media (max-width: 800px) {
-  .name {
-    font-size: 2em;
-  }
-
-  .socials a {
-    font-size: 0.7rem;
-    padding: 8px;
-  }
-
-  p {
-    font-size: 0.7em;
-  }
-
-  img {
-    max-width: 40%;
-  }
-
-  .intro p {
-    margin-bottom: 1.5%;
-  }
-}
-
-@media (max-width: 600px) {
-  .name {
-    font-size: 1.5em;
-  }
-
-  .socials a {
-    font-size: 0.6rem;
-    padding: 7px;
-  }
-
-  p {
-    font-size: 0.5em;
-  }
-
-  img {
-    max-width: 40%;
-  }
-
-  .intro p {
-    margin-bottom: 1%;
+  .discord-card {
+    width: 180px;
   }
 }
