@@ -11,10 +11,8 @@ async function app() {
   const data = await fetch("https://api.lanyard.rest/v1/users/372343076578131968")
     .then((res) => res.json())
     .then((json) => json.data);
-  console.log(data);
   const user = data.discord_user;
 
-  console.log(discordStatuses[data.discord_status]);
   document.querySelectorAll(".discord-card")[0].style.border = `4px solid ${discordStatuses[data.discord_status]}`;
   document.getElementById("discordUser").innerText = `${user.username} - ${data.discord_status}`;
 }

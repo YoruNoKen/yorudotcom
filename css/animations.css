@@ -1,11 +1,5 @@
-.intro h1 {
-  font-size: 2.5rem;
-  color: #fff;
-  animation: fadeInUp 1s ease-in-out;
-}
-
 .intro p {
-  animation: fadeInUp 1s ease-in-out;
+  animation: fadeIn 1.6s ease-in-out;
 }
 
 .donations-container p {
@@ -25,7 +19,17 @@
 }
 
 .discord-card {
-  animation: fadeInUp 1s ease-in-out;
+  animation: fadeIn 1.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeInDown {
