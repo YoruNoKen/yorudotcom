@@ -8,6 +8,10 @@
   animation: fadeInUp 1s ease-in-out;
 }
 
+.discord-card, .username, .status {
+  animation: fadeInUp 1s ease-in-out;
+}
+
 .donations-container p {
   animation: fadeInDown 1s ease-in-out;
 }
@@ -24,8 +28,8 @@
   animation: fadeInRight 1s ease-in-out;
 }
 
-img {
-  animation: fadeInLeft 1s ease-in-out;
+.miku {
+  animation: fadeInUp 1s ease-in-out;
 }
 
 @keyframes fadeInDown {

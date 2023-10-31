@@ -19,16 +19,39 @@ header {
 .intro {
   background-color: #111;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 3%;
+  padding-bottom: 5%;
   text-align: center;
   margin-left: 5%;
   margin-right: 5%;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+.discord-card {
+  background-color: rgba(145, 145, 145, 0.067);
+  padding: 0.5%;
+  width: 200px; /* Set the width of the card */
+}
+
+.username,
+.status {
+  background-color: rgb(78, 73, 73);
+  padding: 8px;
+  margin: 4% 2%;
+  text-align: center;
+}
+
+#miku {
+  margin-bottom: -10%;
+  width: 40%;
+}
+
+.username p {
+  font-weight: bold;
+}
 .err-intro {
   background-color: #111;
   display: flex;
@@ -45,10 +68,6 @@ header {
   margin-left: 5%;
   margin-right: 5%;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-}
-
-.intro p {
-  margin-bottom: -2%;
 }
 
 .image-container {
