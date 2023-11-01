@@ -16,9 +16,14 @@ a {
   color: inherit;
 }
 
+p {
+  transition: all 0.3s ease-in-out;
+}
+
 .name {
   font-size: 3rem;
   font-weight: 600;
+  transition: all 0.3s ease-in-out;
 }
 
 .intro {
@@ -52,18 +57,29 @@ a {
   transform: scale(1.04);
 }
 
-.profile-picture {
-  width: 20%;
-  border-radius: 50%;
+.avatar-container {
+  display: flex;
+  align-items: center;
   margin-right: 15px;
+}
+
+.profile-picture {
+  width: 100px;
+  border-radius: 35%;
 }
 
 .username {
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
+  margin-bottom: 4px;
 }
 
-/* .custom-status,
+.status {
+  font-size: 15px;
+  color: #888;
+}
+
+.custom-status,
 .spotify,
 .vscode {
   font-size: 12px;
@@ -76,7 +92,7 @@ a {
   height: 1.1em;
   margin-right: 4px;
   vertical-align: middle;
-} */
+}
 
 .err-intro {
   background-color: #111;
@@ -150,7 +166,7 @@ img {
   padding: 10px;
   border-radius: 5px;
   position: relative;
-  transition: background-color 0.3s ease, color 0.3s;
+  transition: all 0.3s ease-in-out;
 }
 
 /* Socials Responsiveness */

@@ -13,6 +13,11 @@ async function app() {
     .then((json) => json.data);
   const user = data.discord_user;
 
+  const customStatus = data.activities.filter((activity) => activity.id === "custom")[0];
+  const state = customStatus.state.length > 20 ? customStatus.state.slice(0, 20) + ".." : customStatus.state;
+
+  customStatus ? (document.getElementById("customStatus").innerText = state) : document.getElementById("customStatus").remove();
+
   document.querySelectorAll(".discord-card")[0].style.border = `4px solid ${discordStatuses[data.discord_status]}`;
   document.getElementById("discordUser").innerText = `${user.username} - ${data.discord_status}`;
 }
