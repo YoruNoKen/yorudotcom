@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", app);
 
 const discordStatuses = {
-  online: "rgba(35, 165, 89, 1)",
-  idle: "rgba(255, 177, 50, 1)",
-  dnd: "rgba(240, 71, 71, 1)",
-  offline: "rgba(128, 132, 142, 1)",
+  online: "#43B581",
+  idle: "#FAA61A",
+  dnd: "#F04747",
+  offline: "#747F8D",
 };
 
 async function app() {
@@ -14,10 +14,21 @@ async function app() {
   const user = data.discord_user;
 
   const customStatus = data.activities.filter((activity) => activity.id === "custom")[0];
-  const state = customStatus.state.length > 20 ? customStatus.state.slice(0, 20) + ".." : customStatus.state;
 
-  customStatus ? (document.getElementById("customStatus").innerText = state) : document.getElementById("customStatus").remove();
+  customStatus ? (document.getElementById("customStatus").innerText = (customStatus !== undefined && customStatus.state.length > 20) ? customStatus.state.slice(0, 20) + ".." : customStatus.state) : document.getElementById("customStatus").remove();
 
-  document.querySelectorAll(".discord-card")[0].style.border = `4px solid ${discordStatuses[data.discord_status]}`;
+  const discordCard = document.querySelectorAll(".discord-card")[0] 
+  const color = discordStatuses[data.discord_status]
+
+  discordCard.style.boxShadow = `0px 0px 10px ${color}`
+  discordCard.addEventListener("mouseover", function() {
+    discordCard.style.boxShadow = `0px 0px 15px ${color}`;
+  });
+  
+  discordCard.addEventListener("mouseout", function() {
+    discordCard.style.boxShadow = `0px 0px 10px ${color}`;
+  });
+  
+  discordCard.style.border = `4px solid ${color}`;
   document.getElementById("discordUser").innerText = `${user.username} - ${data.discord_status}`;
 }
