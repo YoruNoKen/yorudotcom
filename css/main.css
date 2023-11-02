@@ -47,19 +47,37 @@ p {
   max-width: 250px;
   padding: 12px;
   margin-top: 1%;
-  border: 4px solid #747F8D;
+  border: 4px solid #747f8d;
   border-radius: 8px;
   transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.discord-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://dcdn.dstn.to/banners/372343076578131968");
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px);
+  z-index: -1;
 }
 
 .discord-card:hover {
-  transform: scale(1.04);
+  transform: scale(1.02);
 }
 
 .avatar-container {
   display: flex;
   align-items: center;
   margin-right: 15px;
+  z-index: 1;
 }
 
 .profile-picture {
@@ -70,7 +88,12 @@ p {
 .username {
   font-weight: 600;
   font-size: 16px;
-  margin-bottom: 4px;
+}
+
+.discord-text {
+  color: antiquewhite;
+  font-weight: bolder;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .status {
@@ -82,7 +105,6 @@ p {
 .spotify,
 .vscode {
   font-size: 12px;
-  margin-top: 4px;
 }
 
 .spotify-icon,
@@ -91,6 +113,42 @@ p {
   height: 1.1em;
   margin-right: 4px;
   vertical-align: middle;
+}
+
+.sticky-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  opacity: 0.6;
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for a subtle effect */
+  z-index: 1000; /* Ensure the header appears above other content */
+}
+
+.sticky-header img {
+  text-decoration: none;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  margin-top: 0.2%;
+  transition: all 0.3s ease-in-out;
+}
+
+.sticky-header img:hover {
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+}
+
+.sticky-header a::before {
+  content: attr(data-normal-text);
+}
+
+.sticky-header a:hover::before {
+  content: attr(data-hover-text);
+  font-weight: bold;
+}
+
+main {
+  margin-top: 5%; /* Adjust the margin to avoid content being overlapped by the fixed header */
 }
 
 .err-intro {
@@ -153,86 +211,12 @@ img {
   margin-top: 5%;
 }
 
-.socials {
-  margin: 1%;
-}
-
-.socials a {
-  min-width: 7%;
-  text-decoration: none;
-  margin: 0.5%;
-  display: inline-block;
-  padding: 10px;
-  border-radius: 5px;
-  position: relative;
-  transition: all 0.3s ease-in-out;
-}
-
-/* Socials Responsiveness */
-.socials a::before {
-  content: attr(data-normal-text);
-}
-
-.socials a:hover::before {
-  content: attr(data-hover-text);
-  font-weight: bold;
-}
-
-.button {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-}
-
 .nav {
   background-color: #505050;
   color: #ddd;
 }
 
 .nav:hover {
-  background-color: #3a3a3a;
-}
-
-.twitch {
-  background-color: #9147ff;
-  color: #fff;
-}
-
-.twitch:hover {
-  background-color: #6b2fca;
-}
-
-.youtube {
-  background-color: #ff0000;
-  color: #fff;
-}
-
-.youtube:hover {
-  background-color: #b20000;
-}
-
-.twitter {
-  background-color: #00a8e8;
-  color: #fff;
-}
-
-.twitter:hover {
-  background-color: #0081ad;
-}
-
-.github {
-  background-color: #505050;
-  color: #ddd;
-}
-
-.github:hover {
-  background-color: #3a3a3a;
-}
-
-.lemmy {
-  background-color: #505050;
-  color: #ddd;
-}
-
-.lemmy:hover {
   background-color: #3a3a3a;
 }
 

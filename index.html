@@ -14,41 +14,30 @@
   </head>
   <body>
     <script src="js/main.js"></script>
-    <header>
-      <div class="socials">
-        <a class="up-button youtube" target="_blank" href="https://www.youtube.com/@yorunoken" data-hover-text="@yorunoken" data-normal-text="YouTube"></a>
-        <a class="up-button twitter" target="_blank" href="https://twitter.com/ken_yoru" data-hover-text="@ken_yoru" data-normal-text="Twitter"></a>
-        <a class="up-button github" target="_blank" href="https://github.com/YoruNoKen" data-hover-text="@YoruNoKen" data-normal-text="GitHub"></a>
-        <a class="up-button twitch" target="_blank" href="https://twitch.tv/yorunokenosu" data-hover-text="@yorunokenosu" data-normal-text="Twitch"></a>
-        <a class="up-button lemmy" target="_blank" href="https://lemmy.ml/u/Yoru" data-hover-text="@Yoru" data-normal-text="Lemmy"></a>
-      </div>
+    <header class="sticky-header">
+      <a target="_blank" class="link" href="https://www.youtube.com/@yorunoken"><img class="button" src="./svg/youtube-white.svg" alt="SVG Image" /></a>
+      <a target="_blank" href="https://twitter.com/ken_yoru"><img class="button" src="./svg/twitter-white.svg" alt="SVG Image" /></a>
+      <a target="_blank" href="https://github.com/YoruNoKen"><img class="button" src="./svg/github-white.svg" alt="SVG Image" /></a>
+      <a target="_blank" href="https://twitch.tv/yorunokenosu"><img class="button" src="./svg/twitch-white.svg" alt="SVG Image" /></a>
     </header>
-    <main>
-      <div class="intro">
-        <div class="text-container">
-          <p class="name">Hi, I'm Fatih.</p>
-          <p>I develop creative projects and bring interesting ideas to life.</p>
-          <p>I mostly play games on my free time and listen to music.</p>
-          <p>
-            I also do freelancing, hmu on <a href="https://twitter.com/ken_yoru" target="_blank"><span class="twitter-tooltip">Twitter</span></a> if you want to commission me!
-          </p>
+    <main class="intro">
+      <div>
+        <p class="name">Hi, I'm Fatih.</p>
+        <p>I develop creative projects and bring interesting ideas to life.</p>
+        <p>I mostly play games on my free time and listen to music.</p>
+        <p>
+          I also do freelancing, hmu on <a href="https://twitter.com/ken_yoru" target="_blank"><span class="twitter-tooltip">Twitter</span></a> if you want to commission me!
+        </p>
+      </div>
+      <a id="anchor" href="https://discord.com/users/372343076578131968" rel="noopener noreferrer" class="discord-card" id="discordBox" target="_blank">
+        <div class="avatar-container">
+          <img src="https://api.lanyard.rest/372343076578131968.png" class="profile-picture" id="pfp" />
         </div>
-        <a id="anchor" href="https://discord.com/users/372343076578131968" rel="noopener noreferrer" class="discord-card" id="discordBox" target="_blank">
-          <div class="avatar-container">
-            <img src="https://api.lanyard.rest/372343076578131968.png" class="profile-picture" id="pfp" />
-          </div>
-          <div class="user-details">
-            <div class="username discord-text" id="discordUser">fetching..</div>
-            <span class="custom-status discord-text" id="customStatus"></span>
-          </div>
-        </a>
-      </div>
+        <div class="user-details">
+          <div class="username discord-text" id="discordUser">fetching..</div>
+          <span class="custom-status discord-text" id="customStatus"></span>
+        </div>
+      </a>
     </main>
-    <header>
-      <div class="socials">
-        <a class="down-button nav" href="donate.html" data-hover-text="Me!" data-normal-text="Donate"></a>
-        <a class="down-button nav" href="projects.html" data-hover-text="Mine!" data-normal-text="Projects"></a>
-      </div>
-    </header>
   </body>
 </html>

@@ -1,17 +1,7 @@
-.intro p {
+.intro p,
+.donations-container p,
+.button {
   animation: fadeIn 1.6s ease-in-out;
-}
-
-.donations-container p {
-  animation: fadeIn 1.6s ease-in-out;
-}
-
-.up-button {
-  animation: fadeInDown 1s ease-in-out;
-}
-
-.down-button {
-  animation: fadeInUp 1s ease-in-out;
 }
 
 .iban-details li {
