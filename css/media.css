@@ -5,7 +5,17 @@
     transform: scale(0.84);
   }
 
-  .sticky-header img,
+  .sticky-header img {
+    transform: scale(0.75);
+    margin-top: -0.5%;
+    margin-left: -0.6%;
+    margin-right: -0.6%;
+  }
+
+  .sticky-header img:hover {
+    transform: scale(0.8);
+  }
+
   .discord-card {
     transform: scale(0.75);
     margin-top: -1%;
