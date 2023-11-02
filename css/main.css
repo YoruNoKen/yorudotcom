@@ -72,22 +72,18 @@ p {
 .discord-card:hover {
   transform: scale(1.02);
 }
-
+/* 
 .avatar-container {
   display: flex;
   align-items: center;
   margin-right: 15px;
   z-index: 1;
-}
+} */
 
 .profile-picture {
   width: 100px;
+  max-width: 70%;
   border-radius: 35%;
-}
-
-.username {
-  font-weight: 600;
-  font-size: 16px;
 }
 
 .discord-text {
@@ -107,13 +103,13 @@ p {
   font-size: 12px;
 }
 
-.spotify-icon,
+/* .spotify-icon,
 .vscode-icon {
   width: 1.1em;
   height: 1.1em;
   margin-right: 4px;
   vertical-align: middle;
-}
+} */
 
 .sticky-header {
   position: fixed;
@@ -122,8 +118,9 @@ p {
   height: 80px;
   opacity: 0.6;
   background-color: rgb(0, 0, 0);
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for a subtle effect */
-  z-index: 1000; /* Ensure the header appears above other content */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000; 
+  transition: all 0.3s ease-in-out;
 }
 
 .sticky-header img {
@@ -138,17 +135,8 @@ p {
   filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
 }
 
-.sticky-header a::before {
-  content: attr(data-normal-text);
-}
-
-.sticky-header a:hover::before {
-  content: attr(data-hover-text);
-  font-weight: bold;
-}
-
 main {
-  margin-top: 5%; /* Adjust the margin to avoid content being overlapped by the fixed header */
+  margin-top: 100px;
 }
 
 .err-intro {
@@ -169,74 +157,17 @@ main {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 
-.image-container {
-  display: flex;
-  justify-content: center;
-}
-
 .tooltip-img {
   position: relative;
   display: inline-block;
 }
 
-img {
+/* img {
   max-width: 70%;
   border-radius: 12px;
-}
+} */
 
-.tooltip-img .tooltiptext-img {
-  text-decoration: none;
-  visibility: hidden;
-  width: auto;
-  background-color: black;
-  color: white;
-  text-align: center;
-  padding: 5px;
-  border-radius: 5px;
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  transition: opacity 0.3s;
-}
 
-.tooltip-img:hover .tooltiptext-img {
-  visibility: visible;
-  opacity: 1;
-}
-
-.spotify {
-  margin-top: 5%;
-}
-
-.nav {
-  background-color: #505050;
-  color: #ddd;
-}
-
-.nav:hover {
-  background-color: #3a3a3a;
-}
-
-.donate {
-  background-color: #c70000;
-  color: #ddd;
-}
-
-.donate:hover {
-  background-color: #9e0000;
-}
-
-.projects {
-  background-color: #1bb630;
-  color: #ddd;
-}
-
-.projects:hover {
-  background-color: #1c9b2d;
-}
 
 .twitter-tooltip {
   color: #00a8e8;
@@ -260,118 +191,4 @@ img {
 
 .twitter-tooltip:hover::before {
   opacity: 1;
-}
-
-.go-back {
-  background-color: #505050;
-  color: #ddd;
-}
-
-.go-back:hover {
-  background-color: #3a3a3a;
-}
-
-.iban {
-  color: #ff6a6a;
-}
-
-.iban:hover {
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-.iban-details {
-  display: none;
-}
-
-.iban-details li {
-  text-align: left;
-  margin-left: 20%;
-}
-
-.iban-show {
-  display: block;
-}
-
-.iban-name,
-.iban-num {
-  position: relative;
-  cursor: pointer;
-  text-decoration: underline;
-  color: #00a8e8;
-}
-
-.iban-num:hover::before {
-  content: "Click me";
-  background-color: #008dc5;
-  color: white;
-  padding: 4px 8px;
-  border-radius: 4px;
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
-}
-
-.iban-name:hover::before {
-  content: "Click me";
-  background-color: #008dc5;
-  color: white;
-  padding: 4px 8px;
-  border-radius: 4px;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 5;
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
-}
-
-.iban-name:hover::before,
-.iban-num:hover::before {
-  opacity: 1;
-}
-
-.iban-num[clicked]::before {
-  content: "Copied..";
-  background-color: #008dc5;
-  color: white;
-  padding: 4px 8px;
-  border-radius: 4px;
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-  opacity: 1;
-  transition: opacity 0.2s ease-in-out;
-}
-.iban-name[clicked]::before {
-  content: "Copied..";
-  background-color: #008dc5;
-  color: white;
-  padding: 4px 8px;
-  border-radius: 4px;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 5;
-  opacity: 1;
-  transition: opacity 0.2s ease-in-out;
-}
-
-.donations-container {
-  background-color: #111;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-left: 5%;
-  margin-right: 5%;
 }

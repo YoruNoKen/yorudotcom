@@ -1,13 +1,5 @@
-.intro p,
-.donations-container p,
-.button {
-  animation: fadeIn 1.6s ease-in-out;
-}
-
-.iban-details li {
-  animation: fadeInRight 1s ease-in-out;
-}
-
+p,
+.button,
 .discord-card {
   animation: fadeIn 1.6s ease-in-out;
 }
@@ -19,53 +11,5 @@
 
   100% {
     opacity: 1;
-  }
-}
-
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(20px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
   }
 }
