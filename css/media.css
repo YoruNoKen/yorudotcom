@@ -2,9 +2,12 @@
   .name,
   .socials a,
   p,
-  .discord-card,
-  .sticky-header img {
+  .discord-card {
     transform: scale(0.84);
+  }
+
+  .sticky-header img {
+    transform: scale(0.75);
   }
 
   .sticky-header {
