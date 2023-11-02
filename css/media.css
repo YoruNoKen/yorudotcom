@@ -1,21 +1,26 @@
 @media (max-width: 800px) {
   .name,
   .socials a,
-  p,
-  .discord-card {
+  p {
     transform: scale(0.84);
   }
 
-  .sticky-header img {
+  .sticky-header img,
+  .discord-card {
     transform: scale(0.75);
-  }
-
-  .sticky-header {
-    height: 70px;
+    margin-top: -1%;
   }
 
   .discord-card:hover {
-    transform: scale(0.94);
+    transform: scale(0.85);
+  }
+
+  .sticky-header {
+    height: 60px;
+  }
+
+  main {
+    margin-top: 75px;
   }
 
   .intro {
