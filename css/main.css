@@ -187,6 +187,7 @@ main {
 .twitter-tooltip {
   color: #00a8e8;
   position: relative;
+  transition: all 0.3 ease-in-out;
 }
 
 .twitter-tooltip:hover::before {

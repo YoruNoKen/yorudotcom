@@ -41,6 +41,10 @@ function changeTheme() {
   document.querySelector(".intro").style.backgroundColor = lightTheme ? "#9e9e9e" : "rgb(17, 17, 17)";
   document.querySelector(".sticky-header").style.backgroundColor = lightTheme ? "#9e9e9e" : "rgb(0, 0, 0)";
 
+  const twitterTooltip =document.querySelector(".twitter-tooltip") 
+  twitterTooltip.style.color = lightTheme ? "#0889bd" : "#00a8e8";
+  // twitterTooltip.style.backgroundColor = lightTheme ? "#047dad" : "#00a8e8";
+
   const elements = ["theme-switcher", "youtube", "github", "twitter", "twitch"];
   elements.forEach((element) => {
     const svg = document.getElementById(element);
