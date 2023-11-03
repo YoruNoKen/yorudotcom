@@ -40,9 +40,8 @@ function changeTheme() {
     element.style.color = lightTheme ? "rgb(17, 17, 17)" : "#ddd";
   });
 
-  const black = lightTheme ? "#9e9e9e" : "rgb(17, 17, 17)";
-  document.querySelector(".intro").style.backgroundColor = black;
-  document.querySelector(".sticky-header").style.backgroundColor = black;
+  document.querySelector(".intro").style.backgroundColor = lightTheme ? "#9e9e9e" : "rgb(17, 17, 17)";
+  document.querySelector(".sticky-header").style.backgroundColor = lightTheme ? "#9e9e9e" : "rgb(0, 0, 0)";
 
   const elements = ["theme-switcher", "youtube", "github", "twitter", "twitch"];
   elements.forEach((element) => {
