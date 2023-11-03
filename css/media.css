@@ -16,6 +16,18 @@
     transform: scale(0.8);
   }
 
+  .sticky-header {
+    height: 60px;
+  }
+
+  .sun {
+    text-decoration: none;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    margin-top: 10%;
+    transition: all 0.3s ease-in-out;
+  }
+
   .discord-card {
     transform: scale(0.75);
     margin-top: -1%;
@@ -23,10 +35,6 @@
 
   .discord-card:hover {
     transform: scale(0.85);
-  }
-
-  .sticky-header {
-    height: 60px;
   }
 
   main {

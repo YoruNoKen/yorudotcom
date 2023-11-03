@@ -4,6 +4,7 @@ body {
   color: #ddd;
   margin: 0;
   padding: 0;
+  transition: all 0.3s ease-in-out;
 }
 
 header {
@@ -91,6 +92,7 @@ p {
   color: antiquewhite;
   font-weight: bolder;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease-in-out;
 }
 
 .status {
@@ -124,7 +126,15 @@ p {
   transition: all 0.3s ease-in-out;
 }
 
-.sticky-header img {
+.sticky-header .sun {
+  position: absolute;
+  left: 0;
+  margin-left: 10%;
+  margin-top: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.button {
   text-decoration: none;
   margin-left: 0.5%;
   margin-right: 0.5%;
@@ -132,14 +142,9 @@ p {
   transition: all 0.3s ease-in-out;
 }
 
-.sticky-header img:hover {
-  transform: scale(1.05);
-  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
-}
-
-.twitter:hover {
-  transform: scale(1.05);
-  filter: drop-shadow(0 0 50px rgba(255, 255, 255, 1));
+.sun:hover {
+  transform: scale(1.03);
+  filter: drop-shadow(0 0 10px rgb(218, 170, 112));
 }
 
 main {

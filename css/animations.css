@@ -1,6 +1,7 @@
 p,
 .button,
-.discord-card {
+.discord-card,
+.sun {
   animation: fadeIn 1.6s ease-in-out;
 }
 

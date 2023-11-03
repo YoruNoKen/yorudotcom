@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", app);
+const themeCookie = document.cookie.split("; ").find((row) => row.startsWith("lightTheme="));
+let lightTheme = themeCookie ? themeCookie.split("=")[1] === "true" : false;
 
 const discordStatuses = {
   online: "#43B581",
@@ -7,7 +8,54 @@ const discordStatuses = {
   offline: "#747F8D",
 };
 
+document.addEventListener("DOMContentLoaded", app);
+document.getElementById("theme-switcher").addEventListener("click", (e) => {
+  e.preventDefault();
+  lightTheme = !lightTheme;
+  changeTheme(e);
+});
+
+function applyHoverEffect(element) {
+  element.addEventListener("mouseover", () => {
+    element.style.transform = "scale(1.05)";
+    element.style.filter = `drop-shadow(0 0 10px ${lightTheme ? "rgba(0, 0, 0, 1)" : "rgba(255, 255, 255, 0.8)"})`;
+  });
+
+  element.addEventListener("mouseout", () => {
+    element.style.transform = "scale(1)";
+    element.style.filter = "none";
+  });
+}
+applyHoverEffect(document.getElementById("youtube"));
+applyHoverEffect(document.getElementById("twitter"));
+applyHoverEffect(document.getElementById("github"));
+applyHoverEffect(document.getElementById("twitch"));
+
+function changeTheme() {
+  new Audio("./audio/switch.mp3").play();
+
+  document.body.style.backgroundColor = lightTheme ? "#c6c6c6" : "#333";
+
+  document.querySelectorAll("p, .discord-text").forEach((element) => {
+    element.style.color = lightTheme ? "rgb(17, 17, 17)" : "#ddd";
+  });
+
+  const black = lightTheme ? "#9e9e9e" : "rgb(17, 17, 17)";
+  document.querySelector(".intro").style.backgroundColor = black;
+  document.querySelector(".sticky-header").style.backgroundColor = black;
+
+  const elements = ["theme-switcher", "youtube", "github", "twitter", "twitch"];
+  elements.forEach((element) => {
+    const svg = document.getElementById(element);
+    svg.src = `./svg/${lightTheme ? "black/" : ""}${element}.svg`;
+  });
+
+  document.cookie = `lightTheme=${lightTheme}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/`;
+}
+
 async function app() {
+  changeTheme();
+
   const data = await fetch("https://api.lanyard.rest/v1/users/372343076578131968")
     .then((res) => res.json())
     .then((json) => json.data);
