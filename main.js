@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", app);
 document.getElementById("theme-switcher").addEventListener("click", (e) => {
   e.preventDefault();
   lightTheme = !lightTheme;
+  new Audio("./audio/switch.mp3").play();
+
   changeTheme(e);
 });
 
@@ -30,8 +32,6 @@ applyHoverEffect(document.getElementById("github"));
 applyHoverEffect(document.getElementById("twitch"));
 
 function changeTheme() {
-  new Audio("./audio/switch.mp3").play();
-
   document.body.style.backgroundColor = lightTheme ? "#c6c6c6" : "#333";
 
   document.querySelectorAll("p, .discord-text").forEach((element) => {
