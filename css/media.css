@@ -5,14 +5,14 @@
     transform: scale(0.84);
   }
 
-  .sticky-header img {
+  .sticky-header .button {
     transform: scale(0.75);
     margin-top: -0.5%;
     margin-left: -0.6%;
     margin-right: -0.6%;
   }
 
-  .sticky-header img:hover {
+  .sticky-header .button:hover {
     transform: scale(0.8);
   }
 
@@ -20,12 +20,17 @@
     height: 60px;
   }
 
-  .sun {
+  .sticky-header .sun {
+    transform: scale(0.75);
     text-decoration: none;
     margin-left: 0.5%;
     margin-right: 0.5%;
-    margin-top: 10%;
+    margin-top: 0.1%;
     transition: all 0.3s ease-in-out;
+  }
+
+  .sticky-header .sun:hover {
+    transform: scale(0.8);
   }
 
   .discord-card {

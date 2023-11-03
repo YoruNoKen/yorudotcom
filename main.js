@@ -17,12 +17,10 @@ document.getElementById("theme-switcher").addEventListener("click", (e) => {
 
 function applyHoverEffect(element) {
   element.addEventListener("mouseover", () => {
-    element.style.transform = "scale(1.05)";
     element.style.filter = `drop-shadow(0 0 10px ${lightTheme ? "rgba(0, 0, 0, 1)" : "rgba(255, 255, 255, 0.8)"})`;
   });
 
   element.addEventListener("mouseout", () => {
-    element.style.transform = "scale(1)";
     element.style.filter = "none";
   });
 }
