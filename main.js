@@ -34,7 +34,7 @@ applyHoverEffect(document.getElementById("twitch"));
 function changeTheme() {
   document.body.style.backgroundColor = lightTheme ? "#c6c6c6" : "#333";
 
-  document.querySelectorAll("p, .discord-text").forEach((element) => {
+  document.querySelectorAll("p").forEach((element) => {
     element.style.color = lightTheme ? "rgb(17, 17, 17)" : "#ddd";
   });
 
