@@ -41,7 +41,7 @@ function changeTheme() {
   document.querySelector(".intro").style.backgroundColor = lightTheme ? "#9e9e9e" : "rgb(17, 17, 17)";
   document.querySelector(".sticky-header").style.backgroundColor = lightTheme ? "#9e9e9e" : "rgb(0, 0, 0)";
 
-  const twitterTooltip =document.querySelector(".twitter-tooltip") 
+  const twitterTooltip = document.querySelector(".twitter-tooltip");
   twitterTooltip.style.color = lightTheme ? "#0889bd" : "#00a8e8";
   // twitterTooltip.style.backgroundColor = lightTheme ? "#047dad" : "#00a8e8";
 
@@ -64,17 +64,21 @@ async function app() {
 
   const customStatus = data.activities.filter((activity) => activity.id === "custom")[0];
 
-  customStatus ? (document.getElementById("customStatus").innerText = customStatus !== undefined && customStatus.state.length > 20 ? customStatus.state.slice(0, 20) + ".." : customStatus.state) : document.getElementById("customStatus").remove();
+  customStatus
+    ? (document.getElementById("customStatus").innerText = customStatus !== undefined && customStatus.state.length > 20
+      ? customStatus.state.slice(0, 20) + ".."
+      : customStatus.state)
+    : document.getElementById("customStatus").remove();
 
   const discordCard = document.querySelectorAll(".discord-card")[0];
   const color = discordStatuses[data.discord_status];
 
   discordCard.style.boxShadow = `0px 0px 10px ${color}`;
-  discordCard.addEventListener("mouseover", function () {
+  discordCard.addEventListener("mouseover", function() {
     discordCard.style.boxShadow = `0px 0px 15px ${color}`;
   });
 
-  discordCard.addEventListener("mouseout", function () {
+  discordCard.addEventListener("mouseout", function() {
     discordCard.style.boxShadow = `0px 0px 10px ${color}`;
   });
 
